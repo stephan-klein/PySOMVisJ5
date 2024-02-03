@@ -2,14 +2,14 @@ import numpy as np
 import pandas as pd
 import numpy as np
 
-loaded_weights = np.loadtxt('datasets\\room_occupancy\\som_occ_s.csv', delimiter=',')
+loaded_weights = np.loadtxt('datasets/room_occupancy/som_occ_s.csv', delimiter=',')
 
 # Reshape the array to its original dimensions (60, 40, 18)
 weights = loaded_weights.reshape((60, 40, 18))
 
 
 # Path to your CSV file
-file_path = 'datasets\\room_occupancy\\Occupancy_Estimation.csv'
+file_path = 'datasets/room_occupancy/Occupancy_Estimation.csv'
 df = pd.read_csv(file_path)
 
 df['Date'] = pd.to_datetime(df['Date'])
