@@ -31,4 +31,4 @@ df[columns_to_normalize] = (df[columns_to_normalize] - df[columns_to_normalize].
 
 from pysomvis import PySOMVis
 vis = PySOMVis(weights=weights, input_data=df.values)
-pn.serve(vis._mainview, show=True)
+pn.serve(vis._mainview, port=44141, show=True)
