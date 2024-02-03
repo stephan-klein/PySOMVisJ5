@@ -2,10 +2,10 @@ import panel as pn
 import numpy as np
 import pandas as pd
 
-loaded_weights = np.loadtxt('datasets\\room_occupancy\\som_occ_s.csv', delimiter=',')
+loaded_weights = np.loadtxt('datasets\\room_occupancy\\som_occ_l.csv', delimiter=',')
 
 # Reshape the array to its original dimensions (60, 40, 18)
-weights = loaded_weights.reshape((60, 40, 18))
+weights = loaded_weights.reshape((300, 200, 18))
 
 
 # Path to your CSV file
@@ -31,4 +31,4 @@ df[columns_to_normalize] = (df[columns_to_normalize] - df[columns_to_normalize].
 
 from pysomvis import PySOMVis
 vis = PySOMVis(weights=weights, input_data=df.values)
-pn.serve(vis._mainview, port=44141, show=True)
+pn.serve(vis._mainview, port=44142, show=True)
