@@ -59,7 +59,7 @@ class NeighbourhoodGraph(VisualizationInterface):
         np.fill_diagonal(filtered_by_radius, False)
 
         # remove upper diagonal of this matrix, as the edges are undirected
-        filtered_by_radius_without_upper_triangle = np.tril(filtered_by_radius).astype(np.int)
+        filtered_by_radius_without_upper_triangle = np.tril(filtered_by_radius).astype(int)
 
         # we multiply an index matrix (0...n) with the boolean one, to obtain in each column vector a list of relevant unit indices
         index_matrix = np.array( [list(range(0, num_nodes)), ] * num_nodes).transpose()
