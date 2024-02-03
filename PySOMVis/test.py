@@ -1,6 +1,6 @@
+import panel as pn
 import numpy as np
 import pandas as pd
-import numpy as np
 
 loaded_weights = np.loadtxt('datasets/room_occupancy/som_occ_s.csv', delimiter=',')
 
@@ -31,4 +31,4 @@ df[columns_to_normalize] = (df[columns_to_normalize] - df[columns_to_normalize].
 
 from pysomvis import PySOMVis
 vis = PySOMVis(weights=weights, input_data=df.values)
-vis._mainview
+pn.serve(vis._mainview, show=True)
