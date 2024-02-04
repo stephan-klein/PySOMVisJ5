@@ -29,7 +29,7 @@ columns_to_normalize = df.select_dtypes(include=np.number).columns
 df[columns_to_normalize] = (df[columns_to_normalize] - df[columns_to_normalize].mean()) / df[columns_to_normalize].std()
 
 # Normalize wine color
-df['color'] = df['color'].map({'white': 0, 'red': 1})
+# df['color'] = df['color'].map({'white': 0, 'red': 1})
 
 from pysomvis import PySOMVis
 vis = PySOMVis(weights=weights, input_data=df.values,classes_names=quality_classes_str,classes=quality_classes)
