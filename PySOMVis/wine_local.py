@@ -32,6 +32,7 @@ dataset = wine_quality.data.original
 df = dataset
 # Create classes from quality column
 quality_classes = y.to_numpy()
+quality_classes_str = quality_classes.astype(str)
 
 # Select columns to normalize
 df.drop(['quality'], axis=1, inplace=True)
@@ -45,5 +46,5 @@ df['color'] = df['color'].map({'white': 0, 'red': 1})
 
 
 from pysomvis import PySOMVis
-vis = PySOMVis(weights=weights, input_data=df.values,classes_names=quality_classes,classes=quality_classes)
+vis = PySOMVis(weights=weights, input_data=df.values,classes_names=quality_classes_str,classes=quality_classes)
 pn.serve(vis._mainview, port=44141, show=True)
