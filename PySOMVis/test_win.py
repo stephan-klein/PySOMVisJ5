@@ -2,10 +2,10 @@ import panel as pn
 import numpy as np
 import pandas as pd
 
-loaded_weights = np.loadtxt('datasets\\room_occupancy\\som_occ_l.csv', delimiter=',')
+loaded_weights = np.loadtxt('datasets\\room_occupancy\\som_occ_s.csv', delimiter=',')
 
 # Reshape the array to its original dimensions (60, 40, 18)
-weights = loaded_weights.reshape((300, 200, 18))
+weights = loaded_weights.reshape((60, 40, 18))
 
 
 # Path to your CSV file
