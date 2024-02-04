@@ -44,7 +44,7 @@ df[columns_to_normalize] = (df[columns_to_normalize] - df[columns_to_normalize].
 # Normalize wine color
 df['color'] = df['color'].map({'white': 0, 'red': 1})
 
-
+print(quality_classes_str)
 from pysomvis import PySOMVis
 vis = PySOMVis(weights=weights, input_data=df.values,classes_names=quality_classes_str,classes=quality_classes)
 pn.serve(vis._mainview, port=44141, show=True)
