@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from ucimlrepo import fetch_ucirepo
 
-loaded_weights = np.loadtxt('PySOMVis\\datasets\\wine_quality\\som_wines_s.csv', delimiter=',')
+loaded_weights = np.loadtxt('datasets/wine_quality/som_wines_s.csv', delimiter=',')
 
 # Reshape the array to its original dimensions (60, 40, 18)
 weights = loaded_weights.reshape((60, 40, 12))
