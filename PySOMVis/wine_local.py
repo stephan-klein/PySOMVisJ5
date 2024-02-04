@@ -6,7 +6,7 @@ from ucimlrepo import fetch_ucirepo
 loaded_weights = np.loadtxt('datasets/wine_quality/som_wines_s.csv', delimiter=',')
 
 # Reshape the array to its original dimensions (60, 40, 18)
-weights = loaded_weights.reshape((60, 40, 12))
+weights = loaded_weights.reshape((60, 40, 11))
 
 # fetch dataset
 wine_quality = fetch_ucirepo(id=186)
