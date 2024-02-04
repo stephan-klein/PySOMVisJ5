@@ -22,6 +22,7 @@ quality_classes_str = np.unique(quality_classes).astype(str)
 
 # Select columns to normalize
 df.drop(['quality'], axis=1, inplace=True)
+df.drop(['color'], axis=1, inplace=True)
 columns_to_normalize = df.select_dtypes(include=np.number).columns
 
 # Z-score normalization
