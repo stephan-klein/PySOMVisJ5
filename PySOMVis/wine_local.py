@@ -31,7 +31,7 @@ dataset = wine_quality.data.original
 
 df = dataset
 # Create classes from quality column
-quality_classes = y.to_numpy()
+quality_classes = y.to_numpy()[0]
 quality_classes_str = quality_classes.astype(str)
 
 # Select columns to normalize
